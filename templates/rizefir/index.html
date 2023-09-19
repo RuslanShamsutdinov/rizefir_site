@@ -1,0 +1,27 @@
+{% extends "rizefir/base_layer.html" %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+<div class="section"> <!-- Основная секция -->
+  <div class="container"> <!-- Основной контейнер -->
+    <div class="catalog"> <!-- Блок каталога -->
+      <div class="catalog__flex"> <!-- Родитеский блок сетки -->
+        <div class="catalog__col"> <!-- Дочерний блок сетки -->
+          <div class="catalog__card card"> <!-- Блок с контентом, в данном случае карточка, все стили этого блока уже не относятся к сетке -->
+            <div class="card__title">Lorem ipsum dolor sit amet</div>
+            <div class="card__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</div>
+            <div class="card__button"><a href="">Button</a></div>
+          </div>
+        </div>
+        <div class="catalog__col"> <!-- Дочерний блок сетки -->
+          <div class="catalog__card card"> <!-- Блок с контентом, в данном случае карточка, все стили этого блока уже не относятся к сетке -->
+            <div class="card__title">Lorem ipsum dolor sit amet</div>
+            <div class="card__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</div>
+            <div class="card__button"><a href="">Button</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

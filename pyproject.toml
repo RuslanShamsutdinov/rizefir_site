@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "rizefir-site"
+version = "0.1.0"
+description = ""
+authors = ["Ruslan Shamsutdinov <nexus191@yandex.ru>"]
+readme = "README.md"
+packages = [{include = "rizefir"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "^4.2.2"
+django-bootstrap5 = "^23.1"
+python-dotenv = "^1.0.0"
+psycopg2-binary = "^2.9.6"
+dj-database-url = "^2.0.0"
+django-filter = "^23.2"
+whitenoise = "^6.5.0"
+gunicorn = "^20.1.0"
+
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^6.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

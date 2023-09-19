@@ -1,0 +1,60 @@
+{% load i18n %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru-ru">
+<head>
+    <meta charset="UTF-8">
+    <title>RiZefir</title>
+    {% load static %}
+    <link href="{% static 'css/bootstrap.rtl.css' %}" rel="stylesheet">
+    <link href="{% static 'css/rizefir.css' %}" rel="stylesheet">
+    <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+</head>
+<body>
+
+{% include "rizefir/header.html" %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid ">
+    <a class="navbar-brand menu_link" href="{% url 'index' %}">Главная</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+            <a class="nav-link menu_link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Каталог
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                {% for cat in category %}
+              <li><a class="dropdown-item" href="#">{{ cat }}</a></li>
+                {% endfor %}
+            </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active menu_link" aria-current="page" href="#">Доставка</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active menu_link" aria-current="page" href="#">Оплата</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active menu_link" aria-current="page" href="#">Отзывы</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active menu_link" aria-current="page" href="{% url 'about' %}">О нас</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="найти продукцию" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Поиск</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+      {% include 'rizefir/bar.html' %}
+      {% block content %}
+      {% endblock %}
+</body>
+</html>
