@@ -2,26 +2,31 @@
 {% load static %}
 {% load i18n %}
 {% block content %}
-<div class="section"> <!-- Основная секция -->
-  <div class="container"> <!-- Основной контейнер -->
-    <div class="catalog"> <!-- Блок каталога -->
-      <div class="catalog__flex"> <!-- Родитеский блок сетки -->
-        <div class="catalog__col"> <!-- Дочерний блок сетки -->
-          <div class="catalog__card card"> <!-- Блок с контентом, в данном случае карточка, все стили этого блока уже не относятся к сетке -->
-            <div class="card__title">Lorem ipsum dolor sit amet</div>
-            <div class="card__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</div>
-            <div class="card__button"><a href="">Button</a></div>
-          </div>
-        </div>
-        <div class="catalog__col"> <!-- Дочерний блок сетки -->
-          <div class="catalog__card card"> <!-- Блок с контентом, в данном случае карточка, все стили этого блока уже не относятся к сетке -->
-            <div class="card__title">Lorem ipsum dolor sit amet</div>
-            <div class="card__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</div>
-            <div class="card__button"><a href="">Button</a></div>
-          </div>
-        </div>
-      </div>
+<div class="container my-5">
+
+  <footer class="text-center text-lg-start" style="background-color: #db6930;">
+    <div class="container d-flex justify-content-center py-5">
+      <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b;">
+        <i class="fab fa-facebook-f"></i>
+      </button>
+      <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b;">
+        <i class="fab fa-youtube"></i>
+      </button>
+      <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b;">
+        <i class="fab fa-instagram"></i>
+      </button>
+      <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b;">
+        <i class="fab fa-twitter"></i>
+      </button>
     </div>
-  </div>
+
+    <!-- Copyright -->
+    <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright:
+      <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  
 </div>
 {% endblock %}

@@ -18,11 +18,10 @@ class IndexView(View):
     def get(self, request, *args, **kwargs):
         category = Category.objects.all()
         products = Product.objects.all()
-        return render(request, self.template_name, {'products': products,'category':category})
+        return render(request, self.template_name, {'products': products, 'category': category})
 
     # def post(self, request, *args, **kwargs):
     #     form = ['Зефирные букеты', 'Выпечка', 'Шоколад']
     #     if form.is_valid():
     #         # <process form cleaned data>
     #         return HttpResponseRedirect('/success/')
-

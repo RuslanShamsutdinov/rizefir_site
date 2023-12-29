@@ -9,7 +9,8 @@ ul {
 
 a {
 	text-decoration: none;
-}
+    white-space: nowrap; /* Запрещаем перенос текста */
+   }
 
 li {
 	list-style-type: none;
@@ -83,15 +84,17 @@ li {
 	-o-transition: transform 0.25s;
 	transition: transform 0.25s;
 	transition: transform 0.25s, -webkit-transform 0.25s;
+
 }
 
 .section {
   margin: 60px 0 /* внешние отступы для блока - сверху и снизу по 60px, слева и справа по 0px */;
 }
-.container {
-  max-width: 1170px /* максимальная ширина контейнера */;
+
+.container_grid {
+  max-width: 1270px /* максимальная ширина контейнера */;
   margin: 0 auto /* расположение контейнера по центру */;
-  padding: 0 30px /* внутренние отступы слева и справа по 30px, верхний и нижний отступы по 0px */;
+  padding: 0 100px /* внутренние отступы слева и справа по 30px, верхний и нижний отступы по 0px */;
 }
 .catalog__flex {
   display: flex /* по умолчанию дочерние блоки(.catalog__col) будут располагаться в ряд */;
@@ -103,7 +106,7 @@ li {
   padding: 0 15px 30px /* Размер внутренних отступов блока - справа и слева по 15px(которые дают общий отступ 30px между блоками) и снизу отступ 30px */;
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 1200px) {
   .catalog__col {
     width: 33.33333333% /* при ширине браузера меньше 1200px будет по 3 блока в ряд */;
   }
@@ -111,10 +114,22 @@ li {
 @media (max-width: 991.98px) {
   .catalog__col {
     width: 50% /* при ширине браузера меньше 992px будет по 2 блока в ряд */;
-  }
+  } 
 }
 @media (max-width: 575.98px) {
   .catalog__col {
     width: 100% /* при ширине браузера меньше 576px будет по 1 блоку */;
   }
+}
+
+
+
+.header {
+	max-width: 1300px;
+	height: 300px;
+	background: #6f42c1 url("/static/media/img/DSC08247.jpg") no-repeat center;
+}
+
+.bor-bottom {
+  border-bottom: 1px dotted red;
 }
