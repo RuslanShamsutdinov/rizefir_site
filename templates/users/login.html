@@ -36,10 +36,11 @@
           {% endif %}
           <!-- Email input -->
           <div class="form-outline mb-4">
-            <label class="form-label" for="form3Example3">Имя пользователя:</label>
+            <label class="form-label" for="form3Example3">Имя пользователя или e-mail:</label>
             <input type='text' id="form3Example3" class="form-control form-control-lg"
               placeholder="Введите имя пользователя" name="username"/>
           </div>
+          
 
           <!-- Password input -->
           <div class="form-outline mb-3">
@@ -48,9 +49,9 @@
               placeholder="Введите пароль" name="password" />
           </div>
 
-          <div class="d-flex justify-content-between align-items-center bor-bottom">
+          <div class="d-flex justify-content-between align-items-center">
             <!-- Checkbox -->
-            <a href="#!" class="text-body bor-bottom">Забыли пароль?</a>
+            <a href="{% url 'users:password_reset' %}" class="text-body bor-bottom">Забыли пароль?</a>
           </div>
 
           <div class="text-center text-lg-start mt-4 pt-2">
@@ -58,6 +59,7 @@
               >Войти</button>
             <p class="small fw-bold mt-2 pt-1 mb-0 ">Не зарегистрировались? <a href="{% url 'users:register' %}"
                 class="link-danger">Регистрация</a></p>
+            
           </div>
 
         </form>

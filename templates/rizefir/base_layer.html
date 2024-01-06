@@ -16,7 +16,10 @@
 {% include "rizefir/header.html" %}
 <header class="header container">
     <div>
-        HEADER
+        HEADER 
+    </div>
+    <div>
+        {{ domain }} {{ protocol }}
     </div>
 </header>
 <meta name="robots" content="index,follow" />
@@ -59,13 +62,17 @@
         {% if user.is_authenticated %}
         <li class="nav-item">
             <a class="nav-link active menu_link" aria-current="page"
-                href="#">{{user.username}}</a>
+                href="{% url 'users:profile' %}">{{user.username}}</a>
         </li>
         <li class="nav-item">|
         </li>
+
         <li class="nav-item">
-            <a class="nav-link active menu_link" aria-current="page"
-                href="{% url 'users:logout' %}">Выйти</a>
+        <form action="{% url 'users:logout' %}" method="post">
+            {% csrf_token %}
+            <a class="nav-link active menu_link" aria-current="page"><button type="submit" 
+            style="border: 0; background-color: rgba(28,28,28,0)">Выйти</button></a>
+        </form>
         </li>
         {% else %}
         <li class="nav-item">

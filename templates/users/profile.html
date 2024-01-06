@@ -12,7 +12,7 @@
             <div class="row justify-content-center">
               <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
 
-                <p class="text-center h3 fw-bold mb-5 mx-1 mx-md-4 mt-4">Регистрация на RiZefir</p>
+                <p class="text-center h2 fw-bold mb-5 mx-1 mx-md-4 mt-4">Профиль {{user.username}}</p>
 
                 <form method="post" class="mx-1 mx-md-4">
                   {% csrf_token %}
@@ -23,17 +23,14 @@
                   <div class="errors">{{ f.errors }}</div>
                   {% endfor %}
                   <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                    <button type="submit" class="btn btn-primary btn-lg">Зарегистрироваться</button>
+                    <button type="submit" class="btn btn-primary btn-lg">Сохранить изменения</button>
                   </div>
                 
                 </form>
-                
-              </div>
-              <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
-
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
-                  class="img-fluid" alt="Sample image">
-
+                <hr>
+                <div class="text-center">
+                <p ><a href="{% url 'users:password_change' %}">Сменить пароль</a></p>
+                </div>
               </div>
 
             </div>
