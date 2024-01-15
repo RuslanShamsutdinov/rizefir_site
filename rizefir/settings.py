@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rizefir.products',
     'rizefir.users',
+    'rizefir.carts',
 ]
 
 MIDDLEWARE = [
